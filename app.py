@@ -5,20 +5,32 @@ from PIL import Image
 import tensorflow as tf
 import tensorflow_ranking as tfr
 from tensorflow.keras import models, preprocessing
-
 import base64
 import numpy as np
 import os
 import re
+from dotenv import load_dotenv
 
+# ENV
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')  # Path to .env file
+load_dotenv(dotenv_path)
+
+# Disable CUDA
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+# Disable Warning oneDNN and AVX AVX2
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+# GLOBAL VARIABLES
 SECRET_KEY = os.urandom(32)
 PATH = os.getcwd()
 N_CLASSES = 4
 
+# Apps init
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config['SECRET_KEY'] = SECRET_KEY
 
+# CSRF Token
 CSRFProtect(app)
 
 def loaded_model():
@@ -42,10 +54,10 @@ def decode_base64(data, altchars=b'+/'):
         data += b'=' * (4 - missing_padding)
     return base64.b64decode(data, altchars)
 
-def prepare_image2 (img):
+def preprocessing_img(img):
     # convert the color from BGR to RGB then convert to PIL array
-    cvt_image =  cv2.imdecode(np.array(im_arr), cv2.COLOR_BGR2RGB)
-    im_pil = Image.fromarray(cvt_image)
+    im_cvt = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    im_pil = Image.fromarray(im_cvt)
 
     # resize the array (image) then PIL image
     im_resized = im_pil.resize((224, 224))
@@ -66,26 +78,21 @@ def predict():
         data = base64.b64encode(image_stream)
         data = decode_base64(data)
         im_arr = np.fromstring(data, dtype=np.uint8)
-        img = cv2.imdecode(np.array(im_arr), cv2.COLOR_BGR2RGB)
+        img = cv2.imdecode(np.array(im_arr), cv2.IMREAD_UNCHANGED)
         print("Input Citra Awal : ", img.shape)
         
-        cv2_image = prepare_image2 (img)
+        cv2_image = preprocessing_img(img)
         print(cv2_image.shape)
         # # Resize Citra
         # img_resize = cv2.resize(img, (224, 224))
         # print("Resize : ", img_resize.shape)
 
         # # Load Model
-        # load_model = loaded_model()
-        # # img_resize = np.asarray(img_resize)
-        # im_pil = Image.fromarray(img_resize)
-        # img_array = preprocessing.image.img_to_array(im_pil)
-        # img_final = np.expand_dims(img_resize,axis=0)
-        # print(img_final.shape)
+        load_model = loaded_model()
 
-        # result = load_model.predict([img_final])
-        # preds = np.argmax(result, axis= -1)
-        # print(preds)
+        result = load_model.predict([cv2_image])
+        preds = np.argmax(result, axis= -1)
+        print(preds)
         return jsonify({
                 'msg': 'success'
            })
