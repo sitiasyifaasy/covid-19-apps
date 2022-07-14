@@ -60,7 +60,12 @@
             <div class="nav-inner">
               <!-- Start Navbar -->
               <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html"> Hello </a>
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="{{ url_for('static', filename='images/itenas.png') }}"
+                    alt="Logo"
+                  />
+                </a>
                 <button
                   class="navbar-toggler mobile-menu-btn"
                   type="button"
@@ -85,14 +90,22 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" aria-label="Toggle navigation">Prediksi</a>
+                      <a
+                        href="#prediksi-container"
+                        aria-label="Toggle navigation"
+                        >Prediksi</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="#tentang-container"
+                        aria-label="Toggle navigation"
+                        >Tentang</a
+                      >
                     </li>
                   </ul>
                 </div>
                 <!-- navbar collapse -->
-                <div class="button">
-                  <a href="signup.html" class="btn">Get started</a>
-                </div>
               </nav>
               <!-- End Navbar -->
             </div>
@@ -110,21 +123,20 @@
         <div class="row align-items-center">
           <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
             <div class="hero-content">
-              <h4 class="wow fadeInUp" data-wow-delay=".2s">
-                25% OFF At First Monthly Services
-              </h4>
+              <h4 class="wow fadeInUp" data-wow-delay=".2s">Tugas Akhir</h4>
               <h1 class="wow fadeInUp" data-wow-delay=".4s">
-                Affordable World Class Cloud Web Hosting
+                IDENTIFIKASI PENYAKIT COVID-19 BERDASARKAN CITRA X-RAYS
+                PARU-PARU
               </h1>
               <p class="wow fadeInUp" data-wow-delay=".6s">
-                Explore and learn more about everything from machine learning
-                and global payments to scaling your team.
+                Masukkan citra x-rays paru-paru untuk mengetahui apakah
+                paru-paru tersebut memiliki penyakit Covid-19, Lung Opacity,
+                atau Viral Pneumonia.
               </p>
-              <h5 class="wow fadeInUp" data-wow-delay=".8s">
-                Start from $3.99/month
-              </h5>
               <div class="button wow zoomIn" data-wow-delay="1s">
-                <a href="#pricing"><i class="lni lni-arrow-down-circle"></i></a>
+                <a href="#prediksi-container"
+                  ><i class="lni lni-arrow-down-circle"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -134,7 +146,7 @@
     <!-- End Hero Area -->
 
     <!-- Start Domain Search -->
-    <section class="domain-search">
+    <section class="domain-search" id="prediksi-container">
       <div class="container">
         <div class="inner-cotainer">
           <img
@@ -150,16 +162,9 @@
           <div class="row">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
               <div class="content">
-                <h2>
-                  <span>Looking for Unique Domain Name?</span>
-                  Check Your Domain Now
-                </h2>
+                <h2>Masukkan Citra X-Rays</h2>
 
                 <div>
-                  <label for="formFileLg" class="form-label"
-                    >Masukkan Citra Chest X-Rays
-                  </label>
-
                   <form enctype="multipart/form-data" id="form-prediksi">
                     <input
                       class="form-control form-control-lg"
@@ -192,7 +197,7 @@
     <!-- End Domain Search -->
 
     <!-- Start Features Area -->
-    <section class="features section">
+    <section class="features section" id="tentang-container">
       <img
         class="shape"
         src="{{ url_for('static', filename='images/shapes/shape.png') }}"
@@ -202,13 +207,11 @@
         <div class="row">
           <div class="col-12">
             <div class="section-title">
-              <h3 class="wow zoomIn" data-wow-delay=".2s">Our Principles</h3>
-              <h2 class="wow fadeInUp" data-wow-delay=".4s">
-                Explore our awesome features
-              </h2>
+              <h2 class="wow fadeInUp" data-wow-delay=".4s">Tentang</h2>
               <p class="wow fadeInUp" data-wow-delay=".6s">
-                Explore and learn more about everything from machine learning
-                and global payments to scaling your team.
+                Website ini di bangun untuk mengetahui penyakit Covid-19, Lung
+                Opacity atau Viral Pneumonia yang dapat di deteksi berdasarkan
+                citra X-Rays paru-paru.
               </p>
             </div>
           </div>
@@ -218,24 +221,24 @@
             <!-- Start Single Feature -->
             <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
               <div class="list-icon">
-                <i class="lni lni-bolt"></i>
+                <i class="lni lni-menu"></i>
               </div>
-              <h3>Faster Loading Speed</h3>
+              <h3>Memiliki 4 Kelas</h3>
               <p>
-                Composed in a pseudo-Latin language which more or less
-                pseudo-Latin language corresponds.
+                Terdapat 4 kelas yang di deteksi yaitu Normal, Covid-19, Lung
+                Opacity dan Viral Pneumonia.
               </p>
             </div>
             <!-- End Single Feature -->
             <!-- Start Single List -->
             <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
               <div class="list-icon">
-                <i class="lni lni-lock"></i>
+                <i class="lni lni-archive"></i>
               </div>
-              <h3>100% Safe and Secure</h3>
+              <h3>Arsitektur DenseNet-264</h3>
               <p>
-                Composed in a pseudo-Latin language which more or less
-                pseudo-Latin language corresponds.
+                Menggunakan arsitektur DenseNet-264 karena memiliki konektivitas
+                padat yang dapat meningkatkan arus informasi antar lapisan.
               </p>
             </div>
             <!-- End Single List -->
@@ -246,32 +249,26 @@
               <div class="list-icon">
                 <i class="lni lni-dashboard"></i>
               </div>
-              <h3>99% Uptime Guarantee</h3>
+              <h3>Tingkat Akurasi 93%</h3>
               <p>
-                Composed in a pseudo-Latin language which more or less
-                pseudo-Latin language corresponds.
+                Tingkat akurasi yang dihasilkan dari model dengan nilai yang
+                terbesar adalah 93%.
               </p>
             </div>
             <!-- End Single Feature -->
             <!-- Start Single Feature -->
             <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
               <div class="list-icon">
-                <i class="lni lni-headphone"></i>
+                <i class="lni lni-link"></i>
               </div>
-              <h3>24/7 Customer Support</h3>
+              <h3>Sumber Dataset</h3>
               <p>
-                Composed in a pseudo-Latin language which more or less
-                pseudo-Latin language corresponds.
+                Dataset bersumber dari Kaggle yaitu Covid-19 Radiography
+                Database yang dibuat oleh Chowdhury dkk dalam jurnal dengan
+                judul “Can AI Help In Screening Viral And COVID-19 Pneumonia?”
               </p>
             </div>
             <!-- End Single Feature -->
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 align-center">
-            <div class="explore-all button">
-              <a href="javascript:void(0)" class="btn">Explore all features</a>
-            </div>
           </div>
         </div>
       </div>
@@ -286,11 +283,10 @@
           <div class="inner-content">
             <div class="row align-items-center">
               <div class="col-lg-6 col-md-6 col-12">
-                <p class="text">
-                  Offers valid for a limited time only hostpack reflect multi
-                  annual discounts. Other terms and conditions may apply.
-                  <a href="javascript:void(0)">Click Here</a>
-                </p>
+                <p class="text">Siti Asy Syifa 15-2018-032</p>
+                <p class="text">Program Studi Informatika</p>
+                <p class="text">Institut Teknologi Nasional Bandung</p>
+                <p class="text">2022</p>
               </div>
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="align-right">

@@ -57,8 +57,8 @@ button:focus,
 }
 
 .form-check-input:checked {
-  background-color: #0069ff;
-  border-color: #0069ff;
+  background-color: #004aad;
+  border-color: #004aad;
 }
 
 select {
@@ -1086,7 +1086,7 @@ ol {
   font-weight: 500;
   display: inline-block;
   margin-bottom: 15px;
-  color: #0069ff;
+  color: #004aad;
   text-transform: capitalize;
 }
 
@@ -1166,7 +1166,7 @@ ol {
   bottom: -1px;
   height: 2px;
   width: 50px;
-  background: #0069ff;
+  background: #004aad;
   content: "";
 }
 
@@ -1210,7 +1210,7 @@ ol {
 .scroll-top:hover {
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
-  background-color: #0069ff;
+  background-color: #004aad;
 }
 
 /* Overlay */
@@ -1292,7 +1292,7 @@ ol {
 
 .pagination .pagination-list li.active a,
 .pagination .pagination-list li:hover a {
-  background: #0069ff;
+  background: #004aad;
   color: #fff;
   border-color: transparent;
 }
@@ -1312,7 +1312,7 @@ ol {
   font-size: 15px;
   font-weight: 500;
   padding: 14px 30px;
-  background-color: #0069ff;
+  background-color: #004aad;
   color: #fff;
   border: none;
   -webkit-transition: all 0.4s ease;
@@ -1380,7 +1380,7 @@ ol {
 }
 
 .button .btn-alt:hover {
-  background-color: #0069ff !important;
+  background-color: #004aad !important;
   color: #fff !important;
 }
 
@@ -1430,7 +1430,7 @@ ol {
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  background: #0069ff;
+  background: #004aad;
   -webkit-animation: preloader-fx 1.6s linear infinite;
   animation: preloader-fx 1.6s linear infinite;
 }
@@ -1502,16 +1502,16 @@ ol {
     border-radius: 8px;
   }
   .header .navbar .navbar-nav .nav-item a:hover {
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar .navbar-nav .nav-item a.active {
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item {
     margin: 0;
   }
   .header .navbar-nav .nav-item:hover a {
-    color: #0069ff;
+    color: #004aad;
   }
   .header .navbar-nav .nav-item a {
     padding: 12px 16px !important;
@@ -1535,7 +1535,7 @@ ol {
     padding: 12px 12px;
   }
   .header .navbar-nav .nav-item .sub-menu .nav-item a:hover {
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item a {
     color: #051441;
@@ -1553,7 +1553,7 @@ ol {
   }
   .header .navbar-nav .nav-item .sub-menu li.active {
     background: #fff !important;
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item .sub-menu .nav-item {
     margin: 0 !important;
@@ -1563,13 +1563,13 @@ ol {
   }
   .header .navbar-nav .nav-item .sub-menu li:hover {
     background: #fff !important;
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item a {
     font-size: 14px;
   }
   .header .navbar-nav .nav-item a:hover {
-    color: #0069ff;
+    color: #004aad;
   }
 }
 
@@ -1596,16 +1596,16 @@ ol {
     border-radius: 8px;
   }
   .header .navbar .navbar-nav .nav-item a:hover {
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar .navbar-nav .nav-item a.active {
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item {
     margin: 0;
   }
   .header .navbar-nav .nav-item:hover a {
-    color: #0069ff;
+    color: #004aad;
   }
   .header .navbar-nav .nav-item a {
     padding: 12px 16px !important;
@@ -1629,7 +1629,7 @@ ol {
     padding: 12px 12px;
   }
   .header .navbar-nav .nav-item .sub-menu .nav-item a:hover {
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item a {
     color: #051441;
@@ -1647,7 +1647,7 @@ ol {
   }
   .header .navbar-nav .nav-item .sub-menu li.active {
     background: #fff !important;
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item .sub-menu .nav-item {
     margin: 0 !important;
@@ -1657,34 +1657,34 @@ ol {
   }
   .header .navbar-nav .nav-item .sub-menu li:hover {
     background: #fff !important;
-    color: #0069ff !important;
+    color: #004aad !important;
   }
   .header .navbar-nav .nav-item a {
     font-size: 14px;
   }
   .header .navbar-nav .nav-item a:hover {
-    color: #0069ff;
+    color: #004aad;
   }
 }
 
 .header .navbar-brand img {
-  width: 190px;
+  width: 90px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header .navbar-brand img {
-    width: 190px;
+    width: 90px;
   }
 }
 
 @media (max-width: 767px) {
   .header .navbar-brand img {
-    width: 180px;
+    width: 90px;
   }
 }
 
 .header.sticky .button .btn {
-  background-color: #0069ff;
+  background-color: #004aad;
   color: #fff;
 }
 
@@ -1715,7 +1715,7 @@ ol {
 }
 
 .sticky .navbar .navbar-nav .nav-item a.active {
-  color: #0069ff;
+  color: #004aad;
 }
 
 .sticky .navbar .navbar-nav .nav-item a {
@@ -1818,7 +1818,7 @@ ol {
 }
 
 .sticky .navbar-nav .nav-item:hover a {
-  color: #0069ff;
+  color: #004aad;
 }
 
 .navbar-nav .nav-item a {
@@ -1950,7 +1950,7 @@ ol {
 }
 
 .navbar-nav .nav-item .sub-menu .nav-item a:hover {
-  color: #0069ff;
+  color: #004aad;
 }
 
 .navbar-nav .nav-item .sub-menu.left-menu {
@@ -1978,7 +1978,7 @@ ol {
 }
 
 .navbar-nav .nav-item .sub-menu > li.active > a {
-  color: #0069ff !important;
+  color: #004aad !important;
 }
 
 .navbar-nav .nav-item .sub-menu > li > a {
@@ -2017,12 +2017,12 @@ ol {
 }
 
 .sticky .button .btn {
-  background-color: #0069ff;
+  background-color: #004aad;
   color: #fff;
 }
 
 .sticky .button .btn:hover {
-  background-color: #0069ff;
+  background-color: #004aad;
   color: #fff;
 }
 
@@ -2037,8 +2037,8 @@ ol {
   background-color: #27314f;
   padding: 280px 0 260px 0;
   z-index: 0;
-  background-color: #0069ff;
-  background-image: url("../images/hero/bg-hosting.png");
+  /* background-color: #004aad; */
+  background-image: url("../images/bg-xrays.png");
   background-size: cover;
   background-position: center;
 }
@@ -2067,10 +2067,10 @@ ol {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 0px 150px;
+  padding: 0px 50px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-itenas.png: 768px) and (max-width: 991px) {
   .hero-area .hero-content {
     padding: 0px 140px;
   }
@@ -2171,7 +2171,7 @@ ol {
   text-align: center;
   display: inline-block;
   background-color: #fff;
-  color: #0069ff;
+  color: #004aad;
   border-radius: 50%;
   font-size: 22px;
   -webkit-transition: all 0.3s ease;
@@ -2373,7 +2373,7 @@ ol {
     margin: 0;
   }
   .domain-search .content .extention-list li a:hover {
-    color: #0069ff;
+    color: #004aad;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
@@ -2382,7 +2382,7 @@ ol {
 .domain-search .content .extention-list li a:hover {
   -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11);
-  border-bottom-color: #0069ff;
+  border-bottom-color: #004aad;
 }
 
 .domain-search .content .extention-list li a span {
@@ -2591,7 +2591,7 @@ ol {
 }
 
 .features.style3 .content h5 {
-  color: #0069ff;
+  color: #004aad;
   margin-bottom: 15px;
   font-size: 15px;
   font-weight: 500;
@@ -2711,7 +2711,7 @@ ol {
 }
 
 .features .content h2 span {
-  color: #0069ff;
+  color: #004aad;
   font-size: 15px;
   font-weight: 500;
   display: block;
@@ -2766,7 +2766,7 @@ ol {
   line-height: 65px;
   display: inline-block;
   background-color: #006aff11;
-  color: #0069ff;
+  color: #004aad;
   font-size: 26px;
   border-radius: 50%;
   -webkit-transition: all 0.4s ease;
@@ -2831,17 +2831,17 @@ ol {
 }
 
 .pricing .nav-pills .nav-link:hover {
-  color: #0069ff;
+  color: #004aad;
 }
 
 .pricing .nav-pills .nav-link.active {
-  background: #0069ff;
+  background: #004aad;
   color: #fff;
 }
 
 .pricing .nav-pills .nav-link.active .badge {
   background-color: #fff !important;
-  color: #0069ff !important;
+  color: #004aad !important;
 }
 
 .pricing .section-title {
@@ -2879,7 +2879,7 @@ ol {
   position: absolute;
   left: -50px;
   top: 22px;
-  background-color: #0069ff;
+  background-color: #004aad;
   color: #fff;
   padding: 6px 50px;
   -webkit-transform: rotate(-45deg);
@@ -2926,7 +2926,7 @@ ol {
 }
 
 .pricing .single-pricing .price {
-  color: #0069ff;
+  color: #004aad;
   font-size: 38px;
   font-weight: 600;
   font-family: DM Sans;
@@ -2971,7 +2971,7 @@ ol {
 
 .pricing .single-pricing .button .btn:hover {
   color: #fff;
-  background-color: #0069ff;
+  background-color: #004aad;
   border-color: transparent;
 }
 
@@ -3034,12 +3034,12 @@ ol {
   text-align: center;
   display: block;
   border-radius: 7px;
-  background: #0069ff0f;
+  background: #004aad0f;
   line-height: 90px;
 }
 
 .pricing-style2 .single-pricing .p-icon i {
-  color: #0069ff;
+  color: #004aad;
   font-size: 30px;
 }
 
@@ -3090,7 +3090,7 @@ ol {
 
 .pricing-style2 .single-pricing .button .btn:hover {
   color: #fff;
-  background-color: #0069ff;
+  background-color: #004aad;
   border-color: transparent;
 }
 
@@ -3137,7 +3137,7 @@ ol {
 }
 
 .call-action .text h2 span {
-  color: #0069ff;
+  color: #004aad;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3156,7 +3156,7 @@ ol {
 
 .call-action .text h2 span {
   display: block;
-  color: #0069ff;
+  color: #004aad;
 }
 
 .call-action .button {
@@ -3290,7 +3290,7 @@ ol {
 }
 
 .footer .single-footer.f-about .social li a:hover {
-  color: #0069ff;
+  color: #004aad;
 }
 
 .footer .single-footer.f-about .copyright-text {
@@ -3330,7 +3330,7 @@ ol {
 }
 
 .footer .single-footer.f-link li a:hover {
-  color: #0069ff;
+  color: #004aad;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px),
@@ -3365,7 +3365,7 @@ ol {
 }
 
 .footer .single-footer.latest-news .single-news .date a:hover {
-  color: #0069ff;
+  color: #004aad;
 }
 
 .footer .single-footer.latest-news .single-news .post-title {
@@ -3379,7 +3379,7 @@ ol {
 }
 
 .footer .single-footer.latest-news .single-news .post-title a:hover {
-  color: #0069ff;
+  color: #004aad;
 }
 
 .footer .single-footer h3 {
@@ -3439,5 +3439,5 @@ ol {
 }
 
 .footer .footer-bottom-area p a:hover {
-  color: #0069ff;
+  color: #004aad;
 }
