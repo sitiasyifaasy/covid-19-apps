@@ -6,6 +6,7 @@
     <title>Covid-19 and Pneumonia - X-Rays Image</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -158,16 +159,8 @@
                   <label for="formFileLg" class="form-label"
                     >Masukkan Citra Chest X-Rays
                   </label>
-                  <form
-                    action="http://127.0.0.1:5000/prediction"
-                    method="POST"
-                    enctype="multipart/form-data"
-                  >
-                    <input
-                      type="hidden"
-                      name="csrf_token"
-                      value="{{ csrf_token() }}"
-                    />
+
+                  <form enctype="multipart/form-data" id="form-prediksi">
                     <input
                       class="form-control form-control-lg"
                       id="input-image"
@@ -176,10 +169,17 @@
                       onchange="readURL(this);"
                     />
 
-                    <img id="uploaded-image" src="#" class="img-fluid my-5" />
+                    <img id="uploaded-image" class="img-fluid my-5" />
+
+                    <div id="hasil-container" class="bd-callout d-none">
+                      <h4 class="mb-2">Hasil Prediksi</h4>
+                      <h5 id="hasil-prediksi"></h5>
+                    </div>
 
                     <div class="search-btn button">
-                      <button class="btn" type="submit">Prediksi</button>
+                      <button class="btn" type="submit" id="btn-prediksi">
+                        Prediksi
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -328,7 +328,7 @@
     <script>
       function readURL(input) {
         if (input.files && input.files[0]) {
-          var reader = new FileReader();
+          let reader = new FileReader();
 
           reader.onload = function (e) {
             $("#uploaded-image").attr("src", e.target.result);
@@ -337,6 +337,48 @@
           reader.readAsDataURL(input.files[0]);
         }
       }
+
+      var csrftoken = $("meta[name=csrf-token]").attr("content");
+
+      $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+          if (
+            !/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) &&
+            !this.crossDomain
+          ) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          }
+          document.querySelector(".preloader").style.opacity = "0.9";
+          document.querySelector(".preloader").style.display = "block";
+        },
+      });
+
+      $("#form-prediksi").submit(function (e) {
+        var form_data = new FormData($("#form-prediksi")[0]);
+        console.log(Array.from(form_data));
+        $.ajax({
+          url: "/prediction/",
+          data: form_data,
+          processData: false,
+          type: "POST",
+          contentType: false,
+          success: function (response) {
+            console.log(response);
+            $("#hasil-container").removeClass("d-none");
+            $("#hasil-prediksi").html(`${response.label}`);
+          },
+          error: function () {
+            document.querySelector(".preloader").style.opacity = "0";
+            document.querySelector(".preloader").style.display = "none";
+          },
+          complete: function () {
+            document.querySelector(".preloader").style.opacity = "0";
+            document.querySelector(".preloader").style.display = "none";
+          },
+        });
+
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>

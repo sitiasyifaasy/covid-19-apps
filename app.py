@@ -11,14 +11,15 @@ import os
 import re
 from dotenv import load_dotenv
 
+# Disable CUDA
+# os.environ['CUDA_VISIBLE_DEVICES'] ="0"
+# Disable Warning oneDNN and AVX AVX2
+# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 # ENV
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')  # Path to .env file
 load_dotenv(dotenv_path)
 
-# Disable CUDA
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-# Disable Warning oneDNN and AVX AVX2
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # GLOBAL VARIABLES
 SECRET_KEY = os.urandom(32)
@@ -83,19 +84,18 @@ def predict():
         
         cv2_image = preprocessing_img(img)
         print(cv2_image.shape)
-        # # Resize Citra
-        # img_resize = cv2.resize(img, (224, 224))
-        # print("Resize : ", img_resize.shape)
 
-        # # Load Model
-        load_model = loaded_model()
-
+        # Load Model
+        load_model = loaded_model()      
         result = load_model.predict([cv2_image])
         preds = np.argmax(result, axis= -1)
-        print(preds)
+        label = "Normal" if preds[0] == 0 else "Covid-19" if preds[0] == 1 else "Lung Opacity" if preds[0] == 2 else "Viral Pneumonia"
+        print(label)
         return jsonify({
-                'msg': 'success'
-           })
+            'status': 'success',
+            'label': str(label),
+            'prediksi': str(preds[0])
+        })
     else:
         return "Hayoh"
 
