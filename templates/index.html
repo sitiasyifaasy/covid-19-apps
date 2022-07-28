@@ -1,380 +1,401 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Covid-19 and Pneumonia - X-Rays Image</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="{{ url_for('static', filename='images/favicon.svg') }}"
-    />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>Covid-19 and Pneumonia - X-Rays Image</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="{{ url_for('static', filename='images/favicon.svg') }}"
+		/>
 
-    <!-- ========================= CSS here ========================= -->
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/LineIcons.3.0.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='/css/animate.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/tiny-slider.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/glightbox.min.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/main.css') }}"
-    />
-  </head>
+		<!-- ========================= CSS here ========================= -->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/LineIcons.3.0.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='/css/animate.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/tiny-slider.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/glightbox.min.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/main.css') }}"
+		/>
+	</head>
 
-  <body>
-    <!-- Preloader -->
-    <div class="preloader">
-      <div class="preloader-inner">
-        <div class="preloader-icon">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-    <!-- /End Preloader -->
+	<body>
+		<!-- Preloader -->
+		<div class="preloader">
+			<div class="preloader-inner">
+				<div class="preloader-icon">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<!-- /End Preloader -->
 
-    <!-- Start Header Area -->
-    <header class="header navbar-area">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="nav-inner">
-              <!-- Start Navbar -->
-              <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html">
-                  <img
-                    src="{{ url_for('static', filename='images/itenas.png') }}"
-                    alt="Logo"
-                  />
-                </a>
-                <button
-                  class="navbar-toggler mobile-menu-btn"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                </button>
-                <div
-                  class="collapse navbar-collapse sub-menu-bar"
-                  id="navbarSupportedContent"
-                >
-                  <ul id="nav" class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                      <a href="/" class="active" aria-label="Toggle navigation"
-                        >Home</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        href="#prediksi-container"
-                        aria-label="Toggle navigation"
-                        >Prediksi</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        href="#tentang-container"
-                        aria-label="Toggle navigation"
-                        >Tentang</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <!-- navbar collapse -->
-              </nav>
-              <!-- End Navbar -->
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </header>
-    <!-- End Header Area -->
+		<!-- Start Header Area -->
+		<header class="header navbar-area">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-12">
+						<div class="nav-inner">
+							<!-- Start Navbar -->
+							<nav class="navbar navbar-expand-lg">
+								<a class="navbar-brand" href="index.html">
+									<img
+										src="{{ url_for('static', filename='images/itenas.png') }}"
+										alt="Logo"
+									/>
+								</a>
+								<button
+									class="navbar-toggler mobile-menu-btn"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#navbarSupportedContent"
+									aria-controls="navbarSupportedContent"
+									aria-expanded="false"
+									aria-label="Toggle navigation"
+								>
+									<span class="toggler-icon"></span>
+									<span class="toggler-icon"></span>
+									<span class="toggler-icon"></span>
+								</button>
+								<div
+									class="collapse navbar-collapse sub-menu-bar"
+									id="navbarSupportedContent"
+								>
+									<ul id="nav" class="navbar-nav ms-auto">
+										<li class="nav-item">
+											<a href="/" class="active" aria-label="Toggle navigation"
+												>Home</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												href="#prediksi-container"
+												aria-label="Toggle navigation"
+												>Prediksi</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												href="#tentang-container"
+												aria-label="Toggle navigation"
+												>Tentang</a
+											>
+										</li>
+									</ul>
+								</div>
+								<!-- navbar collapse -->
+							</nav>
+							<!-- End Navbar -->
+						</div>
+					</div>
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</header>
+		<!-- End Header Area -->
 
-    <!-- Start Hero Area -->
-    <section class="hero-area">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-            <div class="hero-content">
-              <h4 class="wow fadeInUp" data-wow-delay=".2s">Tugas Akhir</h4>
-              <h1 class="wow fadeInUp" data-wow-delay=".4s">
-                IDENTIFIKASI PENYAKIT COVID-19 BERDASARKAN CITRA X-RAYS
-                PARU-PARU
-              </h1>
-              <p class="wow fadeInUp" data-wow-delay=".6s">
-                Masukkan citra x-rays paru-paru untuk mengetahui apakah
-                paru-paru tersebut memiliki penyakit Covid-19, Lung Opacity,
-                atau Viral Pneumonia.
-              </p>
-              <div class="button wow zoomIn" data-wow-delay="1s">
-                <a href="#prediksi-container"
-                  ><i class="lni lni-arrow-down-circle"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Hero Area -->
+		<!-- Start Hero Area -->
+		<section class="hero-area">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+						<div class="hero-content">
+							<h4 class="wow fadeInUp" data-wow-delay=".2s">Tugas Akhir</h4>
+							<h1 class="wow fadeInUp" data-wow-delay=".4s">
+								IDENTIFIKASI PENYAKIT COVID-19 BERDASARKAN CITRA X-RAYS
+								PARU-PARU
+							</h1>
+							<p class="wow fadeInUp" data-wow-delay=".6s">
+								Masukkan citra x-rays paru-paru untuk mengetahui apakah
+								paru-paru tersebut memiliki penyakit Covid-19, Lung Opacity,
+								atau Viral Pneumonia.
+							</p>
+							<div class="button wow zoomIn" data-wow-delay="1s">
+								<a href="#prediksi-container"
+									><i class="lni lni-arrow-down-circle"></i
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Hero Area -->
 
-    <!-- Start Domain Search -->
-    <section class="domain-search" id="prediksi-container">
-      <div class="container">
-        <div class="inner-cotainer">
-          <img
-            class="sahpe"
-            src="{{ url_for('static', filename='images/shapes/shape.png') }}"
-            alt="#"
-          />
-          <img
-            class="sahpe2"
-            src="{{ url_for('static', filename='images/shapes/shape.png') }}"
-            alt="#"
-          />
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-              <div class="content">
-                <h2>Masukkan Citra X-Rays</h2>
+		<!-- Start Domain Search -->
+		<section class="domain-search" id="prediksi-container">
+			<div class="container">
+				<div class="inner-cotainer">
+					<img
+						class="sahpe"
+						src="{{ url_for('static', filename='images/shapes/shape.png') }}"
+						alt="#"
+					/>
+					<img
+						class="sahpe2"
+						src="{{ url_for('static', filename='images/shapes/shape.png') }}"
+						alt="#"
+					/>
+					<div class="row">
+						<div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+							<div class="content">
+								<h2>Masukkan Citra X-Rays</h2>
 
-                <div>
-                  <form enctype="multipart/form-data" id="form-prediksi">
-                    <input
-                      class="form-control form-control-lg"
-                      id="input-image"
-                      name="images"
-                      type="file"
-                      onchange="readURL(this);"
-                    />
+								<div>
+									<form enctype="multipart/form-data" id="form-prediksi">
+										<input
+											class="form-control form-control-lg"
+											id="input-image"
+											name="images"
+											type="file"
+											onchange="readURL(this);"
+										/>
 
-                    <img id="uploaded-image" class="img-fluid my-5" />
+										<img id="uploaded-image" class="img-fluid my-5" />
 
-                    <div id="hasil-container" class="bd-callout d-none">
-                      <h4 class="mb-2">Hasil Prediksi</h4>
-                      <h5 id="hasil-prediksi"></h5>
-                    </div>
+										<div id="hasil-container" class="bd-callout d-none">
+											<h4 class="mb-2">Hasil Prediksi</h4>
+											<h5 id="hasil-prediksi"></h5>
+										</div>
 
-                    <div class="search-btn button">
-                      <button class="btn" type="submit" id="btn-prediksi">
-                        Prediksi
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Domain Search -->
+										<div class="search-btn button">
+											<button class="btn" type="submit" id="btn-prediksi">
+												Prediksi
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Domain Search -->
 
-    <!-- Start Features Area -->
-    <section class="features section" id="tentang-container">
-      <img
-        class="shape"
-        src="{{ url_for('static', filename='images/shapes/shape.png') }}"
-        alt="#"
-      />
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title">
-              <h2 class="wow fadeInUp" data-wow-delay=".4s">Tentang</h2>
-              <p class="wow fadeInUp" data-wow-delay=".6s">
-                Website ini di bangun untuk mengetahui penyakit Covid-19, Lung
-                Opacity atau Viral Pneumonia yang dapat di deteksi berdasarkan
-                citra X-Rays paru-paru.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-12">
-            <!-- Start Single Feature -->
-            <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-              <div class="list-icon">
-                <i class="lni lni-menu"></i>
-              </div>
-              <h3>Memiliki 4 Kelas</h3>
-              <p>
-                Terdapat 4 kelas yang di deteksi yaitu Normal, Covid-19, Lung
-                Opacity dan Viral Pneumonia.
-              </p>
-            </div>
-            <!-- End Single Feature -->
-            <!-- Start Single List -->
-            <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-              <div class="list-icon">
-                <i class="lni lni-archive"></i>
-              </div>
-              <h3>Arsitektur DenseNet-264</h3>
-              <p>
-                Menggunakan arsitektur DenseNet-264 karena memiliki konektivitas
-                padat yang dapat meningkatkan arus informasi antar lapisan.
-              </p>
-            </div>
-            <!-- End Single List -->
-          </div>
-          <div class="col-lg-6 col-md-6 col-12">
-            <!-- Start Single Feature -->
-            <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-              <div class="list-icon">
-                <i class="lni lni-dashboard"></i>
-              </div>
-              <h3>Tingkat Akurasi 93%</h3>
-              <p>
-                Tingkat akurasi yang dihasilkan dari model dengan nilai yang
-                terbesar adalah 93%.
-              </p>
-            </div>
-            <!-- End Single Feature -->
-            <!-- Start Single Feature -->
-            <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-              <div class="list-icon">
-                <i class="lni lni-link"></i>
-              </div>
-              <h3>Sumber Dataset</h3>
-              <p>
-                Dataset bersumber dari Kaggle yaitu Covid-19 Radiography
-                Database yang dibuat oleh Chowdhury dkk dalam jurnal dengan
-                judul “Can AI Help In Screening Viral And COVID-19 Pneumonia?”
-              </p>
-            </div>
-            <!-- End Single Feature -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Features Area -->
+		<!-- Start Features Area -->
+		<section class="features section" id="tentang-container">
+			<img
+				class="shape"
+				src="{{ url_for('static', filename='images/shapes/shape.png') }}"
+				alt="#"
+			/>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title">
+							<h2 class="wow fadeInUp" data-wow-delay=".4s">Tentang</h2>
+							<p class="wow fadeInUp" data-wow-delay=".6s">
+								Website ini di bangun untuk mengetahui penyakit Covid-19, Lung
+								Opacity atau Viral Pneumonia yang dapat di deteksi berdasarkan
+								citra X-Rays paru-paru.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-12">
+						<!-- Start Single Feature -->
+						<div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+							<div class="list-icon">
+								<i class="lni lni-menu"></i>
+							</div>
+							<h3>Memiliki 4 Kelas</h3>
+							<p>
+								Terdapat 4 kelas yang di deteksi yaitu Normal, Covid-19, Lung
+								Opacity dan Viral Pneumonia.
+							</p>
+						</div>
+						<!-- End Single Feature -->
+						<!-- Start Single List -->
+						<div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+							<div class="list-icon">
+								<i class="lni lni-archive"></i>
+							</div>
+							<h3>Arsitektur DenseNet-264</h3>
+							<p>
+								Menggunakan arsitektur DenseNet-264 karena memiliki konektivitas
+								padat yang dapat meningkatkan arus informasi antar lapisan.
+							</p>
+						</div>
+						<!-- End Single List -->
+					</div>
+					<div class="col-lg-6 col-md-6 col-12">
+						<!-- Start Single Feature -->
+						<div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+							<div class="list-icon">
+								<i class="lni lni-dashboard"></i>
+							</div>
+							<h3>Tingkat Akurasi 93%</h3>
+							<p>
+								Tingkat akurasi yang dihasilkan dari model dengan nilai yang
+								terbesar adalah 93%.
+							</p>
+						</div>
+						<!-- End Single Feature -->
+						<!-- Start Single Feature -->
+						<div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+							<div class="list-icon">
+								<i class="lni lni-link"></i>
+							</div>
+							<h3>Sumber Dataset</h3>
+							<p>
+								Dataset bersumber dari Kaggle yaitu Covid-19 Radiography
+								Database yang dibuat oleh Chowdhury dkk dalam jurnal dengan
+								judul “Can AI Help In Screening Viral And COVID-19 Pneumonia?”
+							</p>
+						</div>
+						<!-- End Single Feature -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Features Area -->
 
-    <!-- Start Footer Area -->
-    <footer class="footer section pt-3">
-      <!-- Start Footer Bottom Area -->
-      <div class="footer-bottom-area">
-        <div class="container">
-          <div class="inner-content">
-            <div class="row align-items-center">
-              <div class="col-lg-6 col-md-6 col-12">
-                <p class="text">Siti Asy Syifa 15-2018-032</p>
-                <p class="text">Program Studi Informatika</p>
-                <p class="text">Institut Teknologi Nasional Bandung</p>
-                <p class="text">2022</p>
-              </div>
-              <div class="col-lg-6 col-md-6 col-12">
-                <div class="align-right">
-                  <img
-                    src="{{ url_for('static', filename='images/footer/certificate3.png') }}"
-                    alt="#"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Footer Bottom Area -->
-    </footer>
-    <!--/ End Footer Area -->
+		<!-- Start Footer Area -->
+		<footer class="footer section pt-3">
+			<!-- Start Footer Bottom Area -->
+			<div class="footer-bottom-area">
+				<div class="container">
+					<div class="inner-content">
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-md-6 col-12">
+								<p class="text">Siti Asy Syifa 15-2018-032</p>
+								<p class="text">Program Studi Informatika</p>
+								<p class="text">Institut Teknologi Nasional Bandung</p>
+								<p class="text">2022</p>
+							</div>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="align-right">
+									<img
+										src="{{ url_for('static', filename='images/footer/certificate3.png') }}"
+										alt="#"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Footer Bottom Area -->
+		</footer>
+		<!--/ End Footer Area -->
 
-    <!-- ========================= scroll-top ========================= -->
-    <a href="#" class="scroll-top">
-      <i class="lni lni-arrow-up-circle"></i>
-    </a>
+		<!-- ========================= scroll-top ========================= -->
+		<a href="#" class="scroll-top">
+			<i class="lni lni-arrow-up-circle"></i>
+		</a>
 
-    <!-- ========================= JS here ========================= -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/tiny-slider.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/glightbox.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/count-up.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script>
-      function readURL(input) {
-        if (input.files && input.files[0]) {
-          let reader = new FileReader();
+		<!-- ========================= JS here ========================= -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/tiny-slider.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/glightbox.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/count-up.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		<script>
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					let reader = new FileReader();
 
-          reader.onload = function (e) {
-            $("#uploaded-image").attr("src", e.target.result);
-          };
+					reader.onload = function (e) {
+						$("#uploaded-image").attr("src", e.target.result);
+					};
 
-          reader.readAsDataURL(input.files[0]);
-        }
-      }
+					reader.readAsDataURL(input.files[0]);
+				}
+			}
 
-      var csrftoken = $("meta[name=csrf-token]").attr("content");
+			var csrftoken = $("meta[name=csrf-token]").attr("content");
 
-      $.ajaxSetup({
-        beforeSend: function (xhr, settings) {
-          if (
-            !/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) &&
-            !this.crossDomain
-          ) {
-            xhr.setRequestHeader("X-CSRFToken", csrftoken);
-          }
-          document.querySelector(".preloader").style.opacity = "0.9";
-          document.querySelector(".preloader").style.display = "block";
-        },
-      });
+			$.ajaxSetup({
+				beforeSend: function (xhr, settings) {
+					if (
+						!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) &&
+						!this.crossDomain
+					) {
+						xhr.setRequestHeader("X-CSRFToken", csrftoken);
+					}
+					document.querySelector(".preloader").style.opacity = "0.9";
+					document.querySelector(".preloader").style.display = "block";
+				},
+			});
 
-      $("#form-prediksi").submit(function (e) {
-        var form_data = new FormData($("#form-prediksi")[0]);
-        console.log(Array.from(form_data));
-        $.ajax({
-          url: "/prediction/",
-          data: form_data,
-          processData: false,
-          type: "POST",
-          contentType: false,
-          success: function (response) {
-            console.log(response);
-            $("#hasil-container").removeClass("d-none");
-            $("#hasil-prediksi").html(`${response.label}`);
-          },
-          error: function () {
-            document.querySelector(".preloader").style.opacity = "0";
-            document.querySelector(".preloader").style.display = "none";
-          },
-          complete: function () {
-            document.querySelector(".preloader").style.opacity = "0";
-            document.querySelector(".preloader").style.display = "none";
-          },
-        });
+			$("#form-prediksi").submit(function (e) {
+				var form_data = new FormData($("#form-prediksi")[0]);
+				console.log(Array.from(form_data));
+				$.ajax({
+					url: "/prediction/",
+					data: form_data,
+					processData: false,
+					type: "POST",
+					contentType: false,
+					success: function (response) {
+						console.log(response);
+						let keterangan =
+							response.label == "Normal"
+								? "Negatif Covid-19"
+								: response.label == "Covid-19"
+								? "Positif Covid-19"
+								: response.label == "Pneumonia"
+								? "Pneumonia"
+								: response.label == "Viral"
+								? "Viral"
+								: "Tidak Diketahui";
+						let color =
+							response.label == "Normal"
+								? "#00cc00"
+								: response.label == "Covid-19"
+								? "#cc0000"
+								: response.label == "Pneumonia"
+								? "#ff6633"
+								: response.label == "Viral"
+								? "#663399"
+								: "#663399";
+						$("#hasil-container").removeClass("d-none");
+						$("#hasil-prediksi").css({ color: color, "font-weight": "bold" });
+						$("#hasil-prediksi").html(`${keterangan}`);
+					},
+					error: function () {
+						document.querySelector(".preloader").style.opacity = "0";
+						document.querySelector(".preloader").style.display = "none";
+					},
+					complete: function () {
+						document.querySelector(".preloader").style.opacity = "0";
+						document.querySelector(".preloader").style.display = "none";
+					},
+				});
 
-        e.preventDefault();
-      });
-    </script>
-  </body>
+				e.preventDefault();
+			});
+		</script>
+	</body>
 </html>
