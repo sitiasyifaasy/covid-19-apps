@@ -12,9 +12,9 @@ import re
 from dotenv import load_dotenv
 
 # Disable CUDA
-# os.environ['CUDA_VISIBLE_DEVICES'] ="0"
+os.environ['CUDA_VISIBLE_DEVICES'] ="0"
 # Disable Warning oneDNN and AVX AVX2
-# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # ENV
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')  # Path to .env file
@@ -80,10 +80,12 @@ def predict():
         data = decode_base64(data)
         im_arr = np.fromstring(data, dtype=np.uint8)
         img = cv2.imdecode(np.array(im_arr), cv2.IMREAD_UNCHANGED)
+        size_awal = img.shape
         print("Input Citra Awal : ", img.shape)
         
         cv2_image = preprocessing_img(img)
         print(cv2_image.shape)
+        size_akhir = cv2_image.shape[1:-1]
 
         # Load Model
         load_model = loaded_model()      
@@ -94,7 +96,9 @@ def predict():
         return jsonify({
             'status': 'success',
             'label': str(label),
-            'prediksi': str(preds[0])
+            'prediksi': str(preds[0]),
+            'size_awal': str(size_awal),
+            'size_akhir': str(size_akhir)
         })
     else:
         return "Hayoh"
