@@ -12,9 +12,9 @@ import re
 from dotenv import load_dotenv
 
 # Disable CUDA
-os.environ['CUDA_VISIBLE_DEVICES'] ="0"
+# os.environ['CUDA_VISIBLE_DEVICES'] ="0"
 # Disable Warning oneDNN and AVX AVX2
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # ENV
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')  # Path to .env file
@@ -87,6 +87,11 @@ def predict():
         print(cv2_image.shape)
         size_akhir = cv2_image.shape[1:-1]
 
+        # tampil resize citra 224x224
+        resize = cv2.resize(img, (224, 224))
+        resize_en = cv2.imencode('.jpg', resize)[1].tobytes()
+        resize_base64 = base64.b64encode(resize_en).decode('utf-8')
+
         # Load Model
         load_model = loaded_model()      
         result = load_model.predict([cv2_image])
@@ -98,7 +103,8 @@ def predict():
             'label': str(label),
             'prediksi': str(preds[0]),
             'size_awal': str(size_awal),
-            'size_akhir': str(size_akhir)
+            'size_akhir': str(size_akhir),
+            'image_resize': "data:image/png;base64," + resize_base64
         })
     else:
         return "Hayoh"

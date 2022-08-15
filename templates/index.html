@@ -174,11 +174,15 @@
 											onchange="readURL(this);"
 										/>
 
-										<img id="uploaded-image" class="img-fluid my-5" />
-
-										<div id="container-size" class="d-none text-center">
-											<h4 id="size-awal" class="mb-2"></h4>
-											<h4 id="size-akhir" class="mb-2"></h4>
+										<div class="d-block mt-3">
+											<h4 class="heading-citra d-none">Citra Awal</h4>
+											<img id="uploaded-image" class="img-fluid mb-2" />
+											<h5 id="size-awal" class="mb-2"></h5>
+										</div>
+										<div class="d-block mt-5">
+											<h4 class="heading-citra d-none">Citra Akhir</h4>
+											<img id="resize-image" class="img-fluid mb-2" />
+											<h5 id="size-akhir" class="mb-2"></h5>
 										</div>
 
 										<div id="hasil-container" class="bd-callout d-none">
@@ -388,9 +392,10 @@
 						$("#hasil-container").removeClass("d-none");
 						$("#hasil-prediksi").css({ color: color, "font-weight": "bold" });
 						$("#hasil-prediksi").html(`${keterangan}`);
-						$("#container-size").removeClass("d-none");
+						$(".heading-citra").removeClass("d-none");
 						$("#size-awal").html(`Size Awal : ${response.size_awal}`);
 						$("#size-akhir").html(`Size Akhir : ${response.size_akhir}`);
+						$("#resize-image").attr("src", response.image_resize);
 					},
 					error: function () {
 						document.querySelector(".preloader").style.opacity = "0";
