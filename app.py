@@ -63,6 +63,7 @@ def preprocessing_img(img):
     # resize the array (image) then PIL image
     im_resized = im_pil.resize((224, 224))
     img_array = preprocessing.image.img_to_array(im_resized)
+    # expand dimension to 4D because the model expects this format (1, 224, 224, 3)
     image_array_expanded = np.expand_dims(img_array, axis = 0)
     return image_array_expanded
 
@@ -73,10 +74,13 @@ def index():
 @app.route("/prediction/",  methods = ['GET', 'POST'])
 def predict():
     if request.method == "POST":
-        # Input Citra dari Base64
+        # Input Citra image stream
         images = request.files['images']
         image_stream = images.stream.read()
+        print(image_stream)
+        # Convert ke base64
         data = base64.b64encode(image_stream)
+        # Decode base64 ke array
         data = decode_base64(data)
         im_arr = np.fromstring(data, dtype=np.uint8)
         img = cv2.imdecode(np.array(im_arr), cv2.IMREAD_UNCHANGED)
@@ -87,7 +91,7 @@ def predict():
         print(cv2_image.shape)
         size_akhir = cv2_image.shape[1:-1]
 
-        # tampil resize citra 224x224
+        # tampil resize citra 224x224 untuk di html
         resize = cv2.resize(img, (224, 224))
         resize_en = cv2.imencode('.jpg', resize)[1].tobytes()
         resize_base64 = base64.b64encode(resize_en).decode('utf-8')
